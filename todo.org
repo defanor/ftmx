@@ -1,0 +1,28 @@
+* TODO MATCH queries
+I suspect that the search is currently buggy: probably not using
+emacsql properly, so it doesn't seem to handle complex queries. Should
+be fixed.
+
+* TODO The "Completions" buffer updates
+On rotation, it doesn't get updated, but would be nice if it
+did. Though perhaps it's just not right to use completions for search,
+so rewriting it altogether may also be an option.
+
+* TODO Font faces
+It would be nicer with faces.
+
+* TODO Annotations
+Currently it just takes the first line of a docstring, but would be
+better to highlight found words, and extract the relevant bits.
+
+* TODO Database
+** TODO Persistency
+It should be possible to use the same database from session to
+session, without dropping and filling it again.
+** TODO Updates
+It should also be possible to add new individual commands into the
+database, not everything at once.
+** TODO Connection
+Not sure if it should be closed and reopened all the time, but doing
+so for now, to avoid it hanging in processes and being active on emacs
+exit.
